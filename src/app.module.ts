@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { CoffeesModule } from './coffees/coffees.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService, ConfigType } from '@nestjs/config';
+import { CommonModule } from './common/common.module';
 import appConfig from 'config/app.config';
 
 @Module({
@@ -19,6 +20,7 @@ import appConfig from 'config/app.config';
       load: [appConfig],
     }),
     CoffeesModule,
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService],
