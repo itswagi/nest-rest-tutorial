@@ -14,8 +14,6 @@ export class CoffeesService {
     @InjectModel(Coffee.name) private readonly coffeeModel: Model<Coffee>,
     @InjectConnection() private readonly connection: Connection,
     @InjectModel(Event.name) private readonly eventModel: Model<Event>,
-    @Inject(coffeesConfig.KEY)
-    private readonly coffeesConfiguration: ConfigType<typeof coffeesConfig>,
   ) {}
 
   async findAll(paginationQuery: PaginationQueryDto) {
